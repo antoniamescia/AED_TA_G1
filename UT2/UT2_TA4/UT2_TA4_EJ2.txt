@@ -1,0 +1,16 @@
+EJERCICIO 2:
+
+A)
+	 No es posible aplicar la definición exacta de Dividir y Conquistar, ni vale la pena. Esto se debe a que una de las características de este tipo de técnica es que tendrá dos llamadas recursivas. En el caso de dividir el problema como n! = n*(n-1)! Tendríamos dos problemas, pero solo una llamada recursiva. 
+	También analizamos la alternativa de calcular dos factoriales separados: (n/2)! Y n!(n/2)! Y luego multiplicar los resultados. En este caso si cumpliría con las dos llamadas repulsivas, pero el tiempo de ejecución sería exponencial.
+
+B)  
+	a) En este caso se puede aplicar Dividir y Conquistar. 
+	b) En este caso se divide el árbol en 2 sub árboles. El caso base sería tener un nodo aislado sin hijos.
+	c) Los sub-problemas constan en calcular el alto de cada uno de los sub árboles.
+	d) En este caso, no hay un almacenamiento explícito.
+	e) Se combinan al evaluar el máximo entre los altos de los sub árboles
+	f) En este caso T(n) = (n * log n)
+
+C)
+	a) No puede aplicarse de Dividir y Conquistar porque los sub-problemas no son disjuntos.

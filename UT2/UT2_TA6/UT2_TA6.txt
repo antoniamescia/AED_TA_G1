@@ -1,0 +1,11 @@
+EJERCICIO 1:
+Sí, es posible realizar el factorial mediante programación dinámica. 
+Subproblemas: factorial de cada número menor o igual a n.
+Subestructura óptima: la propia definición de factorial, dado que n! = n*(n-1)!
+Memoización: un vector donde el resultado de n! Se guarda en el índice n. multiplicar de manera descendente desde n hasta 0 hasta encontrar el primer factorial ya guardado en el vector. 
+
+EJERCICIO 2:
+Sí, cumple con los requerimientos para realizarse con programación dinámica. 
+Subproblemas superpuestos: por la naturaleza de la sucesión de Fibonacci, para calcular el término n de la sucesión necesitaré calcular los términos n-1 y n-2. Al calcular n-1, se contempla también el cálculo de n-2 y por ende están superpuestos.
+Subestructura óptima: sí, no hay duda de la optimalidad por la propia naturaleza de fibonuacci. 
+Memoización: un vector inicializado con 0 y 1 en los primeros dos índices. Antes de calcular el fibonacci de cualquier número, se consultará si ya está almacenado. Si no lo está, se calculará repitiendo este proceso hasta encontrar valores que sí estén almacenados y calculados en el vector.
