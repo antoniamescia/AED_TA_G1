@@ -84,7 +84,10 @@ public class TArbolBB<T> implements IArbolBB<T> {
 
     @Override
     public int obtenerAltura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this.raiz == null)
+            return -1; 
+	    else
+            return 1+ Math.max(raiz.getHijoIzq().obtenerAltura(), raiz.getHijoDer().obtenerAltura());
     }
 
     @Override
