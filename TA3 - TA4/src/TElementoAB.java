@@ -118,7 +118,10 @@ public class TElementoAB<T> implements IElementoAB<T> {
 
     @Override
     public int obtenerAltura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this == null)
+            return -1; 
+	    else
+            return 1+ Math.max(this.getHijoIzq().obtenerAltura(), this.getHijoDer().obtenerAltura());
     }
 
     @Override
